@@ -37,9 +37,17 @@ Partial Class EmployeeManagement
         Label7 = New Label()
         Label8 = New Label()
         Label9 = New Label()
-        Button1 = New Button()
+        BtnSave = New Button()
         DateTimePicker1 = New DateTimePicker()
         ComboBox1 = New ComboBox()
+        Button2 = New Button()
+        Button3 = New Button()
+        BtnUpdate = New Button()
+        Button1 = New Button()
+        BtnDelete = New Button()
+        DataGridView1 = New DataGridView()
+        BtnLoad = New Button()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' TbxEID
@@ -73,9 +81,10 @@ Partial Class EmployeeManagement
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(21, 9)
+        Label1.Font = New Font("Georgia", 27.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(12, 9)
         Label1.Name = "Label1"
-        Label1.Size = New Size(133, 15)
+        Label1.Size = New Size(467, 43)
         Label1.TabIndex = 5
         Label1.Text = "Employee Management"
         ' 
@@ -96,83 +105,91 @@ Partial Class EmployeeManagement
         ' Label2
         ' 
         Label2.AutoSize = True
+        Label2.Font = New Font("Georgia", 12F, FontStyle.Bold)
         Label2.Location = New Point(21, 66)
         Label2.Name = "Label2"
-        Label2.Size = New Size(66, 15)
+        Label2.Size = New Size(102, 18)
         Label2.TabIndex = 9
         Label2.Text = "Emloyee ID"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
+        Label3.Font = New Font("Georgia", 12F, FontStyle.Bold)
         Label3.Location = New Point(21, 104)
         Label3.Name = "Label3"
-        Label3.Size = New Size(64, 15)
+        Label3.Size = New Size(100, 18)
         Label3.TabIndex = 10
         Label3.Text = "First Name"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
+        Label4.Font = New Font("Georgia", 12F, FontStyle.Bold)
         Label4.Location = New Point(21, 142)
         Label4.Name = "Label4"
-        Label4.Size = New Size(79, 15)
+        Label4.Size = New Size(118, 18)
         Label4.TabIndex = 11
         Label4.Text = "Middle Name"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
+        Label5.Font = New Font("Georgia", 12F, FontStyle.Bold)
         Label5.Location = New Point(21, 184)
         Label5.Name = "Label5"
-        Label5.Size = New Size(63, 15)
+        Label5.Size = New Size(96, 18)
         Label5.TabIndex = 12
         Label5.Text = "Last Name"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
+        Label6.Font = New Font("Georgia", 12F, FontStyle.Bold)
         Label6.Location = New Point(21, 227)
         Label6.Name = "Label6"
-        Label6.Size = New Size(51, 15)
+        Label6.Size = New Size(81, 18)
         Label6.TabIndex = 13
         Label6.Text = "Birthday"
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Location = New Point(21, 272)
+        Label7.Font = New Font("Georgia", 12F, FontStyle.Bold)
+        Label7.Location = New Point(21, 264)
         Label7.Name = "Label7"
-        Label7.Size = New Size(28, 15)
+        Label7.Size = New Size(38, 18)
         Label7.TabIndex = 14
         Label7.Text = "Age"
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Location = New Point(21, 308)
+        Label8.Font = New Font("Georgia", 12F, FontStyle.Bold)
+        Label8.Location = New Point(21, 300)
         Label8.Name = "Label8"
-        Label8.Size = New Size(88, 15)
+        Label8.Size = New Size(131, 18)
         Label8.TabIndex = 15
         Label8.Text = "Phone Number"
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(21, 346)
+        Label9.Font = New Font("Georgia", 12F, FontStyle.Bold)
+        Label9.Location = New Point(21, 338)
         Label9.Name = "Label9"
-        Label9.Size = New Size(39, 15)
+        Label9.Size = New Size(61, 18)
         Label9.TabIndex = 16
         Label9.Text = "Status"
         ' 
-        ' Button1
+        ' BtnSave
         ' 
-        Button1.Location = New Point(164, 398)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 17
-        Button1.Text = "SAVE"
-        Button1.UseVisualStyleBackColor = True
+        BtnSave.Location = New Point(83, 369)
+        BtnSave.Name = "BtnSave"
+        BtnSave.Size = New Size(75, 23)
+        BtnSave.TabIndex = 17
+        BtnSave.Text = "SAVE"
+        BtnSave.UseVisualStyleBackColor = True
         ' 
         ' DateTimePicker1
         ' 
@@ -190,14 +207,83 @@ Partial Class EmployeeManagement
         ComboBox1.Size = New Size(144, 23)
         ComboBox1.TabIndex = 19
         ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(618, 9)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(89, 23)
+        Button2.TabIndex = 20
+        Button2.Text = "DASHBOARD"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' Button3
+        ' 
+        Button3.Location = New Point(713, 9)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(75, 23)
+        Button3.TabIndex = 21
+        Button3.Text = "SIGNOUT"
+        Button3.UseVisualStyleBackColor = True
+        ' 
+        ' BtnUpdate
+        ' 
+        BtnUpdate.Location = New Point(164, 369)
+        BtnUpdate.Name = "BtnUpdate"
+        BtnUpdate.Size = New Size(75, 23)
+        BtnUpdate.TabIndex = 22
+        BtnUpdate.Text = "UPDATE"
+        BtnUpdate.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(83, 398)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(75, 23)
+        Button1.TabIndex = 23
+        Button1.Text = "Clear"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' BtnDelete
+        ' 
+        BtnDelete.Location = New Point(164, 398)
+        BtnDelete.Name = "BtnDelete"
+        BtnDelete.Size = New Size(75, 23)
+        BtnDelete.TabIndex = 24
+        BtnDelete.Text = "DELETE"
+        BtnDelete.UseVisualStyleBackColor = True
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(350, 66)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.Size = New Size(841, 295)
+        DataGridView1.TabIndex = 25
+        ' 
+        ' BtnLoad
+        ' 
+        BtnLoad.Location = New Point(1116, 369)
+        BtnLoad.Name = "BtnLoad"
+        BtnLoad.Size = New Size(75, 23)
+        BtnLoad.TabIndex = 26
+        BtnLoad.Text = "LOAD"
+        BtnLoad.UseVisualStyleBackColor = True
+        ' 
         ' EmployeeManagement
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(1208, 450)
+        Controls.Add(BtnLoad)
+        Controls.Add(DataGridView1)
+        Controls.Add(BtnDelete)
+        Controls.Add(Button1)
+        Controls.Add(BtnUpdate)
+        Controls.Add(Button3)
+        Controls.Add(Button2)
         Controls.Add(ComboBox1)
         Controls.Add(DateTimePicker1)
-        Controls.Add(Button1)
+        Controls.Add(BtnSave)
         Controls.Add(Label9)
         Controls.Add(Label8)
         Controls.Add(Label7)
@@ -215,6 +301,7 @@ Partial Class EmployeeManagement
         Controls.Add(TbxEID)
         Name = "EmployeeManagement"
         Text = "EmployeeManagement"
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -234,7 +321,14 @@ Partial Class EmployeeManagement
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnSave As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents BtnUpdate As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnDelete As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents BtnLoad As Button
 End Class
