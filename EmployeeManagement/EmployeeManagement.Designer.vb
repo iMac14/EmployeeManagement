@@ -46,7 +46,11 @@ Partial Class EmployeeManagement
         Button1 = New Button()
         BtnDelete = New Button()
         DataGridView1 = New DataGridView()
-        BtnLoad = New Button()
+        TbxSearch = New TextBox()
+        Label10 = New Label()
+        Label11 = New Label()
+        RadioButton1 = New RadioButton()
+        RadioButton2 = New RadioButton()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -97,7 +101,7 @@ Partial Class EmployeeManagement
         ' 
         ' TbxPN
         ' 
-        TbxPN.Location = New Point(164, 300)
+        TbxPN.Location = New Point(164, 336)
         TbxPN.Name = "TbxPN"
         TbxPN.Size = New Size(144, 23)
         TbxPN.TabIndex = 8
@@ -166,7 +170,7 @@ Partial Class EmployeeManagement
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Georgia", 12F, FontStyle.Bold)
-        Label8.Location = New Point(21, 300)
+        Label8.Location = New Point(21, 336)
         Label8.Name = "Label8"
         Label8.Size = New Size(131, 18)
         Label8.TabIndex = 15
@@ -176,7 +180,7 @@ Partial Class EmployeeManagement
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Georgia", 12F, FontStyle.Bold)
-        Label9.Location = New Point(21, 338)
+        Label9.Location = New Point(21, 374)
         Label9.Name = "Label9"
         Label9.Size = New Size(61, 18)
         Label9.TabIndex = 16
@@ -184,7 +188,7 @@ Partial Class EmployeeManagement
         ' 
         ' BtnSave
         ' 
-        BtnSave.Location = New Point(83, 369)
+        BtnSave.Location = New Point(83, 406)
         BtnSave.Name = "BtnSave"
         BtnSave.Size = New Size(75, 23)
         BtnSave.TabIndex = 17
@@ -202,7 +206,7 @@ Partial Class EmployeeManagement
         ' ComboBox1
         ' 
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(164, 338)
+        ComboBox1.Location = New Point(164, 374)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(144, 23)
         ComboBox1.TabIndex = 19
@@ -227,7 +231,7 @@ Partial Class EmployeeManagement
         ' 
         ' BtnUpdate
         ' 
-        BtnUpdate.Location = New Point(164, 369)
+        BtnUpdate.Location = New Point(164, 406)
         BtnUpdate.Name = "BtnUpdate"
         BtnUpdate.Size = New Size(75, 23)
         BtnUpdate.TabIndex = 22
@@ -236,7 +240,7 @@ Partial Class EmployeeManagement
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(83, 398)
+        Button1.Location = New Point(83, 435)
         Button1.Name = "Button1"
         Button1.Size = New Size(75, 23)
         Button1.TabIndex = 23
@@ -245,7 +249,7 @@ Partial Class EmployeeManagement
         ' 
         ' BtnDelete
         ' 
-        BtnDelete.Location = New Point(164, 398)
+        BtnDelete.Location = New Point(164, 435)
         BtnDelete.Name = "BtnDelete"
         BtnDelete.Size = New Size(75, 23)
         BtnDelete.TabIndex = 24
@@ -260,21 +264,65 @@ Partial Class EmployeeManagement
         DataGridView1.Size = New Size(841, 295)
         DataGridView1.TabIndex = 25
         ' 
-        ' BtnLoad
+        ' TbxSearch
         ' 
-        BtnLoad.Location = New Point(1116, 369)
-        BtnLoad.Name = "BtnLoad"
-        BtnLoad.Size = New Size(75, 23)
-        BtnLoad.TabIndex = 26
-        BtnLoad.Text = "LOAD"
-        BtnLoad.UseVisualStyleBackColor = True
+        TbxSearch.Location = New Point(434, 367)
+        TbxSearch.Name = "TbxSearch"
+        TbxSearch.Size = New Size(192, 23)
+        TbxSearch.TabIndex = 27
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label10.Location = New Point(350, 367)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(78, 18)
+        Label10.TabIndex = 28
+        Label10.Text = "SEARCH"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Georgia", 12F, FontStyle.Bold)
+        Label11.Location = New Point(22, 300)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(69, 18)
+        Label11.TabIndex = 29
+        Label11.Text = "Gender"
+        ' 
+        ' RadioButton1
+        ' 
+        RadioButton1.AutoSize = True
+        RadioButton1.Location = New Point(164, 299)
+        RadioButton1.Name = "RadioButton1"
+        RadioButton1.Size = New Size(51, 19)
+        RadioButton1.TabIndex = 30
+        RadioButton1.TabStop = True
+        RadioButton1.Text = "Male"
+        RadioButton1.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton2
+        ' 
+        RadioButton2.AutoSize = True
+        RadioButton2.Location = New Point(235, 299)
+        RadioButton2.Name = "RadioButton2"
+        RadioButton2.Size = New Size(63, 19)
+        RadioButton2.TabIndex = 31
+        RadioButton2.TabStop = True
+        RadioButton2.Text = "Female"
+        RadioButton2.UseVisualStyleBackColor = True
         ' 
         ' EmployeeManagement
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1208, 450)
-        Controls.Add(BtnLoad)
+        ClientSize = New Size(1208, 483)
+        Controls.Add(RadioButton2)
+        Controls.Add(RadioButton1)
+        Controls.Add(Label11)
+        Controls.Add(Label10)
+        Controls.Add(TbxSearch)
         Controls.Add(DataGridView1)
         Controls.Add(BtnDelete)
         Controls.Add(Button1)
@@ -330,5 +378,9 @@ Partial Class EmployeeManagement
     Friend WithEvents Button1 As Button
     Friend WithEvents BtnDelete As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents BtnLoad As Button
+    Friend WithEvents TbxSearch As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
 End Class
